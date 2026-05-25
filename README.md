@@ -164,40 +164,45 @@ http://localhost:5173
 ## 📈 Features & Roadmap
 
 **✅ Completed**
- React + Vite Frontend Setup
- Tailwind CSS UI Architecture
- GSAP Hero Banner Animations
- Laravel 11 Backend Setup
- MySQL Database Integration
- Filament Admin Dashboard
- Headless API Structure
- Product & Banner API Integration
+
+ React + Vite Frontend Setup,
+ Tailwind CSS UI Architecture,
+ GSAP Hero Banner Animations,
+ Laravel 11 Backend Setup,
+ MySQL Database Integration,
+ Filament Admin Dashboard,
+ Headless API Structure,
+ Product & Banner API Integration,
  Monorepo Project Structure
 
 ## 🚧 In Progress
- Laravel Sanctum Authentication
- Shopping Cart System
- Wishlist Functionality
- Checkout Flow
- Stripe / PayPal Payment Gateway
- Order Management
- Product Search & Filtering
+ Laravel Sanctum Authentication,
+ Shopping Cart System,
+ Wishlist Functionality,
+ Checkout Flow,
+ Stripe / PayPal Payment Gateway,
+ Order Management,
+ Product Search & Filtering,
  Responsive Admin Analytics
 
 ## 🎯 Project Goals
-Build a scalable headless ecommerce platform
-Practice real-world Laravel + React architecture
-Implement modern API-driven development
-Create a production-ready portfolio project
+Build a scalable headless ecommerce platform,
+Practice real-world Laravel + React architecture,
+Implement modern API-driven development,
+Create a production-ready portfolio project,
 
 ## 📄 License
 
 This project is licensed under the MIT License.
 
 **👨‍💻 Author**
+
 **Jibin Thomas**
+
 Full Stack Developer
+
 React • Laravel • Tailwind CSS
+
 Passionate about modern web applications
 
 Also add this `.gitignore` in the root project:
@@ -214,4 +219,14 @@ Also add this `.gitignore` in the root project:
 ```
 **Then upload using:**
 
-git initgit add .git commit -m "Initial full-stack ecommerce setup"git branch -M maingit remote add origin https://github.com/Jibinthomas0007/laravel-react-ecommerce.gitgit push -u origin main
+git init
+
+git add .
+
+git commit -m "Initial full-stack ecommerce setup"
+
+git branch -M main
+
+git remote add origin https://github.com/Jibinthomas0007/laravel-react-ecommerce.git
+
+git push -u origin main
