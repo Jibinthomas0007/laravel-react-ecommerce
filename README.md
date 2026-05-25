@@ -1,137 +1,217 @@
-# 🛍️ Tryloom - Premium Headless E-Commerce Platform
+# 🛍️ Tryloom — Premium Headless E-Commerce Platform
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
-Tryloom is a modern, high-performance fashion e-commerce platform built with a robust **Headless Architecture**. By decoupling the frontend from the backend, Tryloom delivers a lightning-fast, app-like user experience while maintaining a highly secure and scalable database structure.
-
-## ✨ Project Overview
-
-This repository uses a **monorepo structure**, housing both the frontend storefront and the backend API logic within a single unified workspace.
-
-* **The Storefront (React):** A fully responsive, customer-facing UI featuring seamless Tailwind design and 3D card-stacking animations powered by GSAP.
-* **The Engine (Laravel):** A headless PHP API handling data management, utilizing Filament v3 for a zero-code, highly customizable administrative dashboard.
+Tryloom is a modern, high-performance fashion e-commerce platform built using a powerful **Headless Architecture**.  
+The frontend and backend are fully decoupled, delivering a fast, scalable, and secure shopping experience.
 
 ---
 
-## 📂 Repository Structure
+# ✨ Project Overview
+
+This repository follows a **Monorepo Architecture**, containing both the frontend storefront and backend API inside a single unified workspace.
+
+### 🖥️ Storefront (React)
+
+A fully responsive customer-facing UI built with:
+
+- React + Vite
+- Tailwind CSS
+- GSAP animations
+- Modern reusable component architecture
+
+### ⚙️ Backend Engine (Laravel)
+
+A powerful Laravel API system featuring:
+
+- RESTful API architecture
+- Filament v3 admin dashboard
+- MySQL database management
+- Laravel Sanctum authentication
+- Secure headless backend structure
+
+---
+
+# 📂 Repository Structure
 
 ```text
 TRYLOOM-UP/
 │
-├── frontend/               # React (Vite) Storefront
+├── frontend/                  # React (Vite) Storefront
 │   ├── src/
-│   │   ├── components/     # Reusable UI elements
-│   │   ├── hooks/          # Custom API fetching logic
-│   │   ├── pages/          # Main route views
-│   │   └── data/           # Local state & assets
-│   └── package.json        
+│   │   ├── components/        # Reusable UI Components
+│   │   ├── hooks/             # Custom Hooks & API Logic
+│   │   ├── pages/             # Route Pages
+│   │   └── data/              # Static Data & Assets
+│   └── package.json
 │
-├── backend/                # Laravel 11 API & Admin Panel
-│   ├── app/                # Models & Controllers
-│   ├── database/           # Migrations & Seeders
-│   └── routes/api.php      # Headless API endpoints
+├── backend/                   # Laravel 11 API & Admin Panel
+│   ├── app/                   # Controllers & Models
+│   ├── database/              # Migrations & Seeders
+│   └── routes/api.php         # API Routes
 │
-├── .gitignore              # Master ignore file for full-stack
-└── README.md               # Project documentation
+├── .gitignore
+└── README.md
 ```
 
 ## 🛠️ Tech Stack
 
-Frontend (Storefront)
-Framework: React.js (via Vite)
+**Frontend (Storefront)**
 
-Styling: Tailwind CSS
+| Technology      | Purpose            |
+| --------------- | ------------------ |
+| React.js (Vite) | Frontend Framework |
+| Tailwind CSS    | Styling            |
+| GSAP            | Animations         |
+| React Icons     | Icon Library       |
 
-Animations: GSAP (GreenSock Animation Platform)
+**Backend (API & Admin Panel)**
 
-Icons: React Icons
-
-Backend (API & Admin Panel)
-Core: Laravel 11 (PHP)
-
-Database: MySQL
-
-Admin Dashboard: Filament v3
-
-Authentication: Laravel Sanctum (Token-based SPA auth)
+| Technology      | Purpose           |
+| --------------- | ----------------- |
+| Laravel 11      | Backend Framework |
+| MySQL           | Database          |
+| Filament v3     | Admin Dashboard   |
+| Laravel Sanctum | Authentication    |
 
 ## 🚀 Getting Started
 
-1. Clone the Repository
-Bash
-git clone [https://github.com/Jibinthomas0007/laravel-react-ecommerce.git](https://github.com/Jibinthomas0007/laravel-react-ecommerce.git)
-cd laravel-react-ecommerce
-2. Backend Setup (Laravel API)
-Open a terminal and navigate to the backend folder:
+**1️⃣ Clone the Repository**
 
-Bash
+git clone https://github.com/Jibinthomas0007/laravel-react-ecommerce.git
+
+cd laravel-react-ecommerce
+
+**2️⃣ Backend Setup (Laravel API)**
+
+Navigate to the backend folder:
+
 cd backend
 
-# Install PHP dependencies
+**Install PHP Dependencies**
+
 composer install
 
-# Create the environment file (make sure to update DB credentials inside)
+**Create Environment File**
+
 cp .env.example .env
 
-# Generate application key
+Update your database credentials inside .env.
+
+**Generate Application Key**
+
 php artisan key:generate
 
-# Run database migrations to build the tables
+**Run Database Migrations**
+
 php artisan migrate
 
-# Link the storage folder so uploaded images are publicly visible
+**Link Storage Folder**
+
 php artisan storage:link
 
-# Start the Laravel API Server
+**Start Laravel Server**
+
 php artisan serve
-The API will now be broadcasting at http://localhost:8000
 
-🔐 Create an Admin Account
-To access the dashboard to manage products and banners, run this in your backend terminal:
+Backend API:
 
-Bash
+http://localhost:8000
+
+## 🔐 Create Admin Account
+
+Run the following command:
+
 php artisan make:filament-user
-Access the dashboard at http://localhost:8000/admin
 
-3. Frontend Setup (React Storefront)
-Open a new terminal and navigate to the frontend folder:
+Filament Admin Panel:
 
-Bash
+http://localhost:8000/admin
+
+**3️⃣ Frontend Setup (React Storefront)**
+
+Open a new terminal:
+
 cd frontend
 
-# Install Node dependencies
+**Install Node Dependencies**
+
 npm install
 
-# Create the environment file and link it to the Laravel API
+**Create Environment File**
+
 echo "VITE_API_BASE_URL=http://localhost:8000/api" > .env
 
-# Start the Vite development server
+**Start Frontend Server**
+
 npm run dev
-The React storefront will now be running at http://localhost:5173
 
-## 📈 Roadmap & Features
+Frontend URL:
 
-[x] Scaffold React UI architecture & Tailwind layout
+http://localhost:5173
 
-[x] Integrate GSAP timeline animations for Hero Banners
+## 📡 API Endpoints
 
-[x] Establish Git monorepo structure
+| Endpoint          | Description              |
+| ----------------- | ------------------------ |
+| `/api/products`   | Fetch all products       |
+| `/api/banners`    | Fetch homepage banners   |
+| `/api/categories` | Fetch product categories |
 
-[x] Initialize Laravel 11 Backend & MySQL Database
+## 📈 Features & Roadmap
 
-[x] Generate Filament Admin Dashboard
+**✅ Completed**
+ React + Vite Frontend Setup
+ Tailwind CSS UI Architecture
+ GSAP Hero Banner Animations
+ Laravel 11 Backend Setup
+ MySQL Database Integration
+ Filament Admin Dashboard
+ Headless API Structure
+ Product & Banner API Integration
+ Monorepo Project Structure
 
-[x] Connect React frontend to live Laravel API endpoints (/api/banners, /api/products)
+## 🚧 In Progress
+ Laravel Sanctum Authentication
+ Shopping Cart System
+ Wishlist Functionality
+ Checkout Flow
+ Stripe / PayPal Payment Gateway
+ Order Management
+ Product Search & Filtering
+ Responsive Admin Analytics
 
-[ ] Implement secure User Authentication via Laravel Sanctum
+## 🎯 Project Goals
+Build a scalable headless ecommerce platform
+Practice real-world Laravel + React architecture
+Implement modern API-driven development
+Create a production-ready portfolio project
 
-[ ] Build interactive Shopping Cart logic
+## 📄 License
 
-[ ] Integrate Checkout & Payment Gateway (Stripe/PayPal)
+This project is licensed under the MIT License.
 
-## 🤝 License
+**👨‍💻 Author**
+**Jibin Thomas**
+Full Stack Developer
+React • Laravel • Tailwind CSS
+Passionate about modern web applications
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Also add this `.gitignore` in the root project:
+
+```gitignore
+/node_modules
+/vendor
+/.env
+/public/storage
+/storage/*.key
+/backend/vendor
+/backend/node_modules
+/frontend/node_modules
+```
+**Then upload using:**
+
+git initgit add .git commit -m "Initial full-stack ecommerce setup"git branch -M maingit remote add origin https://github.com/Jibinthomas0007/laravel-react-ecommerce.gitgit push -u origin main
