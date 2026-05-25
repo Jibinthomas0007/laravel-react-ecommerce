@@ -1,0 +1,57 @@
+# =========================
+# OS & EDITOR FILES
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =========================
+# FRONTEND (REACT / VITE)
+# =========================
+# Never commit your heavy dependencies or built files
+**/node_modules/
+**/dist/
+**/build/
+
+# NEVER commit React environment variables (secrets/API keys)
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Frontend Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# BACKEND (LARAVEL)
+# =========================
+# Never commit PHP dependencies
+**/vendor/
+
+# NEVER commit Laravel environment variables (Database passwords)
+**/.env
+**/.env.backup
+
+# Ignore Laravel's generated public storage links and cache
+**/public/hot
+**/public/storage
+
+# Ignore Laravel storage files (sessions, logs, uploads, cache)
+**/storage/*.key
+**/storage/debugbar/
+**/storage/logs/
+**/storage/framework/cache/data/
+**/storage/framework/sessions/
+**/storage/framework/testing/
+**/storage/framework/views/
+
+# Ignore SQLite databases if you ever use them for testing
+**/*.sqlite
+**/*.sqlite3
